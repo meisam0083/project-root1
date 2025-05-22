@@ -1,0 +1,88 @@
+<div class="subscription-card__body">
+                        <p class="subscription-duration">۶ ماه دسترسی کامل</p>
+                        <p class="subscription-price">
+                            <span class="price-amount">۱۴۹</span>
+                            هزار تومان
+                        </p>
+                    </div>
+                    <button class="btn btn--subscribe" data-action="subscribe" data-plan="149000">
+                        انتخاب پلن
+                    </button>
+                </article>
+
+                <article class="subscription-card" data-tier="imperial">
+                    <h2 class="subscription-card__title">امپریال</h2>
+                    <div class="subscription-card__body">
+                        <p class="subscription-duration">۱۲ ماه دسترسی ویژه</p>
+                        <p class="subscription-price">
+                            <span class="price-amount">۲۴۹</span>
+                            هزار تومان
+                        </p>
+                    </div>
+                    <button class="btn btn--subscribe" data-action="subscribe" data-plan="249000">
+                        انتخاب پلن
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Map View -->
+        <section class="view view--map" data-view="map" hidden aria-labelledby="mapHeading">
+            <h1 id="mapHeading" class="view__title">
+                <span aria-hidden="true">🌍</span>
+                جستجوی پلاک
+            </h1>
+            
+            <form id="searchForm" class="search-form">
+                <div class="form-group grid-layout">
+                    <div class="form-field">
+                        <label for="mainPlate" class="form-label">پلاک اصلی</label>
+                        <input 
+                            type="number" 
+                            id="mainPlate"
+                            class="form-control"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="مثال: ۱۲۳"
+                            aria-describedby="plateHelp"
+                        >
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="subPlate" class="form-label">پلاک فرعی</label>
+                        <input 
+                            type="number" 
+                            id="subPlate"
+                            class="form-control"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="مثال: ۴۵"
+                            aria-describedby="plateHelp"
+                        >
+                    </div>
+                </div>
+                <div id="plateHelp" class="sr-only">مقادیر عددی وارد نمایید</div>
+            </form>
+
+            <div id="mapContainer" class="map-container">
+                <noscript>
+                    <p class="map-fallback">
+                        ❌ برای استفاده از نقشه نیاز به فعال‌سازی جاوااسکریپت دارید
+                    </p>
+                </noscript>
+            </div>
+        </section>
+    </main>
+
+    <!-- Core Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+        crossorigin="anonymous"
+        async
+    ></script>
+    
+    <script src="./scripts/app.js" type="module" defer></script>
+</body>
+</html>
